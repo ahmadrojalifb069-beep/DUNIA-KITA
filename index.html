@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dunia Rojali</title>
+<style>
+body{margin:0;background:#090909;color:#fff;font-family:Arial;display:flex;justify-content:center;align-items:center;height:100vh}
+#box{max-width:700px;text-align:center;padding:25px}button{padding:12px 24px;margin:10px;border:none;border-radius:8px;background:#f1c40f}
+h1{color:#ffd54f}
+</style></head><body><div id="box"></div>
+<script>
+const chapters=[
+["Sebelum kita lanjut...","Aku cuma mau bilang, makasih ya. Udah mau nemenin aku selama lebih dari satu minggu ini."],
+["Deep Talk","Mungkin karena aku udah lumayan lama ga deep talk sama cewe, aku ngerasa sama kamu nyambung."],
+["Nyaman","Aku ngobrolnya nyaman. Mungkin aku belum terlalu tau kamu."],
+["Permukaan","Mungkin ini baru permukaan. Aku belum pernah tau kamu marah atau ngambek gimana."],
+["Kedalaman","Aku belum tau kedalaman kamu gimana, begitu pun sebaliknya."],
+["Mengenal","Aku belum terlalu tau sifat kamu lebih dalam, begitu juga sebaliknya."],
+["Percaya","Perlahan-lahan aku pengen mencoba percaya sama manusia lagi. Bantu aku ya, semoga aku ga salah."],
+["Pilihan","Semoga aku bisa percaya sama pilihan aku buat naruh kepercayaan lagi ke seseorang... yaitu kamu."],
+["Maaf","Maaf juga, mungkin cara aku deketin kamu terkesan aneh. Soalnya aku beneran udah lupa."],
+["Terima Kasih","Dan terima kasih lagi, udah mau didekatin dengan cara seaneh ini, seprik ini hehe."],
+["Jujur","Jujur aku malu ngomong atau ngetiknya, jadi aku bikin program coding aja hehe."],
+["END OF PROGRAM","Kalau suatu hari nanti kita benar-benar saling mengenal lebih jauh, semoga ini cuma jadi halaman pertama dari cerita yang lebih panjang. Terima kasih sudah membuka dunia kecilku. - Rojali"]
+];
+let i=0;
+function home(){box.innerHTML=`<h1>SELAMAT DATANG DI DUNIA ROJALI</h1><p>Apakah kamu mau masuk lebih dalam ke dunia Rojali?</p><button onclick="step2()">Ya ❤️</button>`}
+function step2(){box.innerHTML=`<h1>✨</h1><p>Bolehkah aku masuk lebih dalam ke dunia Dela?</p><button onclick="story()">Ya ❤️</button>`}
+function story(){show()}
+function show(){let c=chapters[i];box.innerHTML=`<h1>${c[0]}</h1><p>${c[1]}</p>${i<chapters.length-1?'<button onclick="next()">Next →</button>':'<button onclick="home()">Ulangi</button>'}`}
+function next(){i++;show()}
+home();
+</script></body></html>
